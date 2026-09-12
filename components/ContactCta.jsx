@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 // Place your counselor image at: /public/counselor.png
+// Tip: a cutout PNG (transparent or matching background) reads best here,
+// since the photo bleeds straight to the bottom edge of the card.
 
 const socials = [
   {
@@ -35,9 +37,9 @@ export default function ContactCta() {
   return (
     <section className="w-full bg-[#FFFEFA] px-6 py-16">
       <div className="mx-auto container">
-        <div className="relative flex flex-col items-center gap-10 overflow-hidden rounded-3xl bg-[#161616] px-8 py-12 sm:px-12 md:flex-row md:justify-between">
+        <div className="relative flex items-center justify-between gap-6 overflow-hidden rounded-3xl bg-[#161616] pl-8 sm:pl-12">
           {/* Left: text + CTA */}
-          <div className="max-w-md text-center md:text-left">
+          <div className="max-w-md py-2">
             <h2 className="text-2xl font-semibold leading-snug text-white sm:text-4xl">
               Not sure what your next step should be?
             </h2>
@@ -69,20 +71,19 @@ export default function ContactCta() {
             </Link>
           </div>
 
-          {/* Middle: counselor image */}
-
-          {/* Right: social icons */}
-          <div className="flex gap-18">
-            <div className="relative h-52 w-44 shrink-0 sm:h-64 sm:w-52">
+          {/* Right: image bleeding to the bottom edge + social icons */}
+          <div className="relative flex h-full shrink-0 items-end gap-4 self-end sm:gap-6">
+            <div className="relative h-40 w-32 sm:h-56 sm:w-44 md:h-64 md:w-52">
               <Image
                 src="/counselor.png"
                 alt="Support counselor ready to help"
                 fill
-                sizes="520px"
-                className="object-cover object-bottom"
+                sizes="220px"
+                className="object-cover object-top"
               />
             </div>
-            <div className="flex gap-3 md:flex-col md:gap-3">
+
+            <div className="flex flex-col gap-3 py-6 pr-6 sm:pr-10">
               {socials.map((social) => (
                 <a
                   key={social.name}
@@ -90,7 +91,7 @@ export default function ContactCta() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.name}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white hover:text-[#161616]"
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white hover:text-[#161616] sm:h-10 sm:w-10"
                 >
                   <svg
                     width="16"

@@ -11,16 +11,16 @@ const countries = [
 ];
 
 const navLinks = [
-  { href: "/success-stories", label: "Success Stories" },
   { href: "/services", label: "Services" },
-  { href: "/news-events", label: "News & Events" },
+  { href: "/success-stories", label: "Success Stories" },
+  { href: "/seminar-and-events", label: "News & Events" },
   { href: "/contact", label: "Contact" },
 ];
 
 export default function Header() {
   return (
     <div className="sticky top-0 z-50 w-full px-4 pt-4">
-      <header className="mx-auto max-w-7xl rounded-full border border-black/5 bg-linear-to-b from-white/70 via-white/40 to-[#FFFEFA] shadow-lg shadow-black/5 backdrop-blur-xl">
+      <header className="mx-auto max-w-7xl rounded-full border border-black/5 bg-linear-to-b from-white/80 via-white/70 to-[#FFFEFA] shadow-lg shadow-black/5 backdrop-blur-xl">
         <div className="flex h-16 w-full items-center justify-between px-6">
           <Link
             href="/"
@@ -34,7 +34,7 @@ export default function Header() {
             />
           </Link>
 
-          <nav className="hidden items-center gap-8 text-base font-light text-zinc-700 lg:flex">
+          <nav className="hidden items-center gap-8 text-base font-light text-zinc-900 lg:flex">
             <div className="group relative">
               <button
                 type="button"
@@ -60,7 +60,7 @@ export default function Header() {
               </button>
 
               <div className="invisible absolute left-1/2 top-full z-50 w-50 -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
-                <div className="rounded-2xl border border-black/5 bg-white/95 p-4 shadow-xl backdrop-blur-xl">
+                <div className="rounded-2xl border border-black/5 bg-white p-4 shadow-xl backdrop-blur-xl">
                   <div className="grid grid-cols-1 gap-1">
                     {countries.map((country) => (
                       <Link

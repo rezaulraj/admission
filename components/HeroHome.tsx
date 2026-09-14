@@ -1,5 +1,5 @@
-
 import Image from "next/image";
+import Link from "next/link";
 
 // Place your image at: /public/heroadmission.png
 
@@ -20,8 +20,8 @@ export default function HeroHome() {
             supported at every step of the journey.
           </p>
 
-          <button
-            type="button"
+          <Link
+            href="/contact"
             className="mt-9 inline-flex items-center gap-2 rounded-full border border-[#1B1B1B] bg-white px-6 py-3 text-sm font-semibold text-[#1B1B1B] transition-colors hover:bg-[#1B1B1B] hover:text-white"
           >
             Schedule A Free Consultation
@@ -40,7 +40,7 @@ export default function HeroHome() {
                 strokeLinejoin="round"
               />
             </svg>
-          </button>
+          </Link>
         </div>
 
         {/* Right: image, basic */}

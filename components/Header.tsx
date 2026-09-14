@@ -2,13 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 const countries = [
+  "United Kingdom",
   "Australia",
   "Finland",
   "Romania",
   "Malta",
   "Hungary",
   "Cyprus",
-  "United Kingdom",
   "Greece",
   "Lithuania",
 ];
@@ -22,7 +22,7 @@ const navLinks = [
 const about = [
   "Our Story",
   "Success Stories",
-  "Our Gallery",
+  // "Our Gallery",
   "Careers",
   "Contact",
   "Our Blogs",
@@ -32,7 +32,7 @@ const partner = ["Recruitment Partner", "Institution Partner"];
 export default function Header() {
   return (
     <div className="sticky top-0 z-50 w-full px-4 pt-4">
-      <header className="mx-auto max-w-7xl rounded-full border border-black/5 bg-linear-to-b from-white/80 via-white/70 to-[#FFFEFA] shadow-lg shadow-black/5 backdrop-blur-xl">
+      <header className="mx-auto container rounded-full border border-black/5 bg-linear-to-b from-white/80 via-white/70 to-[#FFFEFA] shadow-lg shadow-black/5 backdrop-blur-xl">
         <div className="flex h-16 w-full items-center justify-between px-6">
           <Link
             href="/"
@@ -163,9 +163,7 @@ export default function Header() {
                     {partner.map((partner) => (
                       <Link
                         key={partner}
-                        href={`/partner/${partner
-                          .toLowerCase()
-                          .replace(/\s+/g, "-")}`}
+                        href={`/${partner.toLowerCase().replace(/\s+/g, "-")}`}
                         className="rounded-lg px-3 py-2 text-base font-medium text-zinc-600 transition-colors duration-150 hover:bg-[#0D7CE1]/8 hover:text-black"
                       >
                         {partner}
@@ -180,7 +178,7 @@ export default function Header() {
           <div className="hidden items-center gap-3 lg:flex">
             <Link
               href="/auth/login"
-              className="flex h-10 items-center justify-center rounded-full border border-black px-5 text-[15px] font-semibold tracking-wide text-black transition-colors duration-200 hover:border-black/25 hover:bg-black/5"
+              className="flex h-10 items-center justify-center rounded-full border border-black px-5 text-[15px] font-semibold tracking-wide text-black transition-colors duration-200 hover:border-[#E0483E] hover:bg-black/2 hover:text-[#E0483E]"
             >
               Login
             </Link>

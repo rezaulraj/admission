@@ -39,7 +39,7 @@ export default function ContactCta() {
       <div className="mx-auto container">
         <div className="relative flex items-center justify-between gap-6 overflow-hidden rounded-3xl bg-[#161616] pl-8 sm:pl-12">
           {/* Left: text + CTA */}
-          <div className="max-w-md py-2">
+          <div className="max-w-md py-12">
             <h2 className="text-2xl font-semibold leading-snug text-white sm:text-4xl">
               Not sure what your next step should be?
             </h2>
@@ -71,7 +71,6 @@ export default function ContactCta() {
             </Link>
           </div>
 
-          {/* Right: image bleeding to the bottom edge + social icons */}
           <div className="relative flex h-full shrink-0 items-end gap-4 self-end sm:gap-6">
             <div className="relative h-40 w-32 sm:h-56 sm:w-44 md:h-64 md:w-52">
               <Image

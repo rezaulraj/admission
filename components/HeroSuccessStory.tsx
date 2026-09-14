@@ -66,9 +66,7 @@ export default function HeroSuccessStory() {
               </svg>
             </div>
             <div>
-              <div className="text-lg font-semibold text-[#1B1B1B]">
-                5,000+
-              </div>
+              <div className="text-lg font-semibold text-[#1B1B1B]">5,000+</div>
               <div className="text-xs font-semibold text-[#6B6B6B]">
                 Students Placed Abroad
               </div>

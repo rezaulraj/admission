@@ -12,8 +12,8 @@ const countries = [
 
 const navLinks = [
   { href: "/services", label: "Services" },
-  // { href: "/success-stories", label: "Success Stories" },
-  // { href: "/contact", label: "Contact" },
+  { href: "/Universities", label: "universities" },
+  { href: "/Courses", label: "courses" },
 ];
 
 const about = [

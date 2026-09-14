@@ -37,7 +37,7 @@ export default function DreamDestinations() {
             <Link
               key={destination.slug}
               href={`/countries/${destination.slug}`}
-              className="group relative block aspect-[4/3] overflow-hidden rounded-3xl"
+              className="group relative block aspect-[3/3] overflow-hidden rounded-3xl"
             >
               <Image
                 src={destination.image}
@@ -47,7 +47,7 @@ export default function DreamDestinations() {
                 className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent transition-colors duration-500 group-hover:from-black/70" />
-              <span className="absolute inset-x-0 bottom-6 text-center text-lg font-semibold text-white sm:text-xl">
+              <span className="absolute inset-x-0 bottom-6 text-center text-lg font-semibold text-white sm:text-2xl">
                 {destination.name}
               </span>
             </Link>

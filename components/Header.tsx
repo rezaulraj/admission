@@ -36,8 +36,8 @@ export default function Header() {
 
           <nav className="hidden items-center gap-8 text-base font-light text-zinc-900 lg:flex">
             <div className="group relative">
-              <button
-                type="button"
+              <Link
+                href={"/countries"}
                 className="flex cursor-pointer items-center gap-1.5 py-2 transition-colors duration-200 group-hover:text-black"
               >
                 Countries
@@ -57,7 +57,7 @@ export default function Header() {
                   />
                 </svg>
                 <span className="absolute inset-x-0 -bottom-0.5 h-[2px] origin-left scale-x-0 rounded-full bg-black transition-transform duration-300 group-hover:scale-x-100" />
-              </button>
+              </Link>
 
               <div className="invisible absolute left-1/2 top-full z-50 w-50 -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
                 <div className="rounded-2xl border border-black/5 bg-white p-4 shadow-xl backdrop-blur-xl">

@@ -2,12 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 const countries = [
+  "Australia",
+  "Finland",
   "Romania",
   "Malta",
   "Hungary",
   "Cyprus",
   "United Kingdom",
-  "greece",
+  "Greece",
+  "Lithuania",
 ];
 
 const navLinks = [

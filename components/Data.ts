@@ -56,7 +56,22 @@ const Countrys = [
                         title:"Foundation Program",
                         para:"O Level or Year 10 completion. IELTS / PTE (Proof of English proficiency).",
                         img:"/"
-                    }
+                    },
+                    {
+                        title:"Diploma Program",
+                        para:"Academic: HSC or A Level completion. IELTS / PTE (Proof of English proficiency).",
+                        img:"/"
+                    },
+                    {
+                        title:"Bachelor's Program",
+                        para:"Academic: HSC or A Level completion. IELTS / PTE (Proof of English proficiency).",
+                        img:"/"
+                    },
+                    {
+                        title:"Master's Program",
+                        para:"Academic: Bachelor's degree completed. IELTS / PTE (Proof of English proficiency).",
+                        img:"/"
+                    },
                 ]
             }
         }

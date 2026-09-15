@@ -1,8 +1,5 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-// Place your map image at: /public/map.png
 
 const stats = [
   {

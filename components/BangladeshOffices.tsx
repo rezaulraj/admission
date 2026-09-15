@@ -1,12 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
-
-// This component is designed to sit behind a dynamic route, e.g.
-// app/countries/[slug]/page.tsx, where `country` and `offices` are
-// resolved from the slug (from a CMS, database, or a static lookup map).
-// Sample Bangladesh data is provided below as a working default.
 
 type Office = {
   slug: string;

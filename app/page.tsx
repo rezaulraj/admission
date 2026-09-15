@@ -6,11 +6,13 @@ import FaqSection from "@/components/FaqSection";
 import HeroHome from "@/components/HeroHome";
 import LatestBlogs from "@/components/LatestBlogs";
 import OurPartners from "@/components/OurPartners";
-import PartnerInstitutions from "@/components/PartnerInstitutions";
+// import PartnerInstitutions from "@/components/PartnerInstitutions";
 import StudentVideoStories from "@/components/StudentVideoStories";
 import VisaSuccessStories from "@/components/VisaSuccessStories";
 import WhyChose from "@/components/WhyChose";
 import ContactCta from "@/components/ContactCta";
+import HowWeHelp from "@/components/HowWeHelp";
+import TheJourney from "@/components/TheJourney";
 
 export default function Home() {
   return (
@@ -18,8 +20,10 @@ export default function Home() {
       <HeroHome />
       <WhyChose />
       <Accreditations />
+      <HowWeHelp />
       <DreamDestinations />
-      <PartnerInstitutions />
+      <TheJourney />
+      {/* <PartnerInstitutions /> */}
       <VisaSuccessStories />
       <CtaBanner />
       <StudentVideoStories />

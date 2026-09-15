@@ -1,114 +1,68 @@
-const branches = [
-  {
-    name: "Kalabagan",
-    address: "1st Floor, 165 Lake Circus (Abed Dhali Road), Dhaka 1205",
-    phones: ["01713243433", "01713243437"],
-    email: "info@admissiononboard.com",
-  },
-  {
-    name: "Banani",
-    address:
-      "Taneem Square (1st Fl), 158/E Kamal Ataturk Avenue, Banani, Dhaka-1213",
-    phones: ["01713243416", "01713243420"],
-    email: "info@admissiononboard.com",
-  },
-  {
-    name: "Mirpur",
-    address:
-      "House 14, Main Road Section 7 (Beside Mirpur 11 Central Mosque), Pallabi, Mirpur, Dhaka",
-    phones: ["01713243413"],
-    email: "info@admissiononboard.com",
-  },
+import React from "react";
+import Link from "next/link";
+
+const offices = [
+  { name: "Bangladesh", slug: "bangladesh" },
+  { name: "Ghana", slug: "ghana" },
+  { name: "India", slug: "india" },
+  { name: "Kenya", slug: "kenya" },
+  { name: "Nepal", slug: "nepal" },
+  { name: "Nigeria", slug: "nigeria" },
+  { name: "Pakistan", slug: "pakistan" },
+  { name: "Sri Lanka", slug: "sri-lanka" },
+  { name: "United Kingdom", slug: "united-kingdom" },
 ];
 
-function PinIcon() {
+export default function GlobalNetwork() {
   return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="#E0483E"
-      className="shrink-0"
-    >
-      <path d="M12 2C7.86 2 4.5 5.36 4.5 9.5c0 5.25 6.19 11.44 6.46 11.7a1.5 1.5 0 0 0 2.08 0c.27-.26 6.46-6.45 6.46-11.7C19.5 5.36 16.14 2 12 2Zm0 10.5A3 3 0 1 1 12 6.5a3 3 0 0 1 0 6Z" />
-    </svg>
-  );
-}
-
-function PhoneIcon() {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="#E0483E"
-      className="shrink-0"
-    >
-      <path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z" />
-    </svg>
-  );
-}
-
-function MailIcon() {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="#E0483E"
-      className="shrink-0"
-    >
-      <path d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm1.4 2 6.1 5.2a1 1 0 0 0 1 0L18.6 6H5.4ZM4 8.4V18h16V8.4l-6.7 5.7a3 3 0 0 1-3.6 0L4 8.4Z" />
-    </svg>
-  );
-}
-
-export default function BranchLocations() {
-  return (
-    <section className="w-full bg-[#FFFEFA] px-6 py-20">
+    <section className="w-full bg-black px-6 py-20">
       <div className="mx-auto container">
-        <div className="text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-[#1B1B1B] sm:text-4xl">
-            Start Your Journey <span className="text-[#E0483E]">With Us</span>
-          </h2>
-          <p className="mt-3 text-sm font-semibold text-[#6B6B6B] sm:text-base">
-            Find the branch closest to you
-          </p>
-        </div>
+        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_1.3fr] md:gap-16">
+          {/* Left: copy */}
+          <div>
+            <p className="text-xs font-bold uppercase tracking-widest text-[#E0483E]">
+              Global Network
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
+              Present Across Three Continents
+            </h2>
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/60 sm:text-base">
+              Globally connected, locally focused. Find an Admission OnBoard
+              team wherever you are.
+            </p>
+          </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
-          {branches.map((branch) => (
-            <div
-              key={branch.name}
-              className="rounded-2xl border border-[#ECECEC] bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
-            >
-              <h3 className="text-lg font-semibold text-[#1B1B1B]">
-                {branch.name}
-              </h3>
-
-              <div className="mt-4 flex items-start gap-3">
-                <PinIcon />
-                <p className="text-sm text-[#4B4B4B]">{branch.address}</p>
-              </div>
-
-              <div className="mt-3 flex items-start gap-3">
-                <PhoneIcon />
-                <p className="text-sm text-[#4B4B4B]">
-                  {branch.phones.join(", ")}
-                </p>
-              </div>
-
-              <div className="mt-3 flex items-start gap-3">
-                <MailIcon />
-                <a
-                  href={`mailto:${branch.email}`}
-                  className="text-sm text-[#4B4B4B] hover:text-[#E0483E]"
+          {/* Right: office grid */}
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+            {offices.map((office) => (
+              <Link
+                key={office.slug}
+                href={`/countries/${office.slug}`}
+                className="group relative flex items-center justify-between overflow-hidden rounded-xl border border-white/10 bg-white/5 px-5 py-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-[#E0483E]/60 hover:bg-white/10"
+              >
+                <span
+                  className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-[#E0483E]/0 via-[#E0483E]/15 to-[#E0483E]/0 transition-transform duration-700 group-hover:translate-x-full"
+                  aria-hidden
+                />
+                <span className="relative">{office.name}</span>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="relative shrink-0 -translate-x-1 text-white/40 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:text-[#E0483E] group-hover:opacity-100"
                 >
-                  {branch.email}
-                </a>
-              </div>
-            </div>
-          ))}
+                  <path
+                    d="M5 12h14M13 6l6 6-6 6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>

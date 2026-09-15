@@ -1,19 +1,46 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import React from "react";
 // Place your logo at: /public/logo.png
+// Place your accreditation badges at:
+// /public/icef-badge.png
+// /public/airc-badge.png
 
-const importantLinksLeft = [
-  { label: "About", href: "/about" },
-  { label: "Success Stories", href: "/success-stories" },
-  { label: "Our Branches", href: "/branches" },
-  { label: "Mission Statement", href: "/mission" },
+// Only mark a branch `active: true` once its country page/office data is
+// actually live. Inactive branches render as plain, non-clickable text.
+const branches = [
+  { name: "United Kingdom", slug: "united-kingdom", active: true },
+  { name: "Bangladesh", slug: "bangladesh", active: true },
+  { name: "India", slug: "india", active: false },
+  { name: "Nepal", slug: "nepal", active: false },
+  { name: "Pakistan", slug: "pakistan", active: false },
+  { name: "Sri Lanka", slug: "sri-lanka", active: false },
+  { name: "Ghana", slug: "ghana", active: false },
+];
+// Contact Us
+// USA [ Mission HQ ] :1111 Oakfield Dr., Ste. 115E ,Brandon ,FL 33511
+
+// UK :
+
+// UAE : Level 23, Boulevard Plaza 2 Sheikh Mohammed bin Rashid Boulevard - Dubai
+
+// Bangladesh :3rd floor of Ananda Tower, Jail Road, Sylhet
+
+// Bangladesh :3rd Floor, VIP Plaza, FC Road, G-Block, Near Artillery, Halishahar, Chittagong
+const companyLinks = [
+  { label: "About Us", href: "/our-story" },
+  { label: "Our Services", href: "/services" },
+  { label: "Universities", href: "/universities" },
+  { label: "Courses", href: "/courses" },
+  { label: "Blog", href: "/our-blogs" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
-const importantLinksRight = [
-  { label: "Blogs", href: "/blogs" },
-  { label: "Top Destinations", href: "/countries" },
-  { label: "Sitemap", href: "/sitemap" },
+const legalLinks = [
+  { label: "Privacy", href: "/privacy" },
+  { label: "Terms of Use", href: "/terms" },
+  { label: "Cookies", href: "/cookies" },
+  { label: "Career", href: "/careers" },
 ];
 
 const socials = [
@@ -44,45 +71,23 @@ const socials = [
   },
 ];
 
-function PinIcon() {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="#E0483E"
-      className="mt-0.5 shrink-0"
-    >
-      <path d="M12 2C7.86 2 4.5 5.36 4.5 9.5c0 5.25 6.19 11.44 6.46 11.7a1.5 1.5 0 0 0 2.08 0c.27-.26 6.46-6.45 6.46-11.7C19.5 5.36 16.14 2 12 2Zm0 10.5A3 3 0 1 1 12 6.5a3 3 0 0 1 0 6Z" />
-    </svg>
-  );
-}
+function BranchItem({ name, slug, active }: (typeof branches)[number]) {
+  if (active) {
+    return (
+      <Link
+        href={`/countries/${slug}`}
+        className="text-[#5B5B5B] transition-colors hover:text-[#E0483E]"
+      >
+        {name}
+      </Link>
+    );
+  }
 
-function PhoneIcon() {
+  // Not active yet: plain, non-clickable text.
   return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="#E0483E"
-      className="mt-0.5 shrink-0"
-    >
-      <path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z" />
-    </svg>
-  );
-}
-
-function MailIcon() {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="#E0483E"
-      className="mt-0.5 shrink-0"
-    >
-      <path d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm1.4 2 6.1 5.2a1 1 0 0 0 1 0L18.6 6H5.4ZM4 8.4V18h16V8.4l-6.7 5.7a3 3 0 0 1-3.6 0L4 8.4Z" />
-    </svg>
+    <span className="cursor-default text-[#B5B5B5]" aria-disabled="true">
+      {name}
+    </span>
   );
 }
 
@@ -90,92 +95,121 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mx-auto container rounded-4xl px-6 py-14 bg-[#F5F5F3]">
-      <div className=" ">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
-          {/* Brand */}
-          <div>
-            <Link href="/" className="inline-block">
+    <footer className="mx-auto container rounded-4xl bg-[#F5F5F3] px-6 py-14">
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.1fr_1fr_1fr_1fr_1fr]">
+        {/* Brand */}
+        <div className="md:col-span-1">
+          <Link href="/" className="inline-block">
+            <Image
+              src="/logo.png"
+              alt="Admission OnBoard"
+              width={170}
+              height={38}
+            />
+          </Link>
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-[#5B5B5B]">
+            Admission OnBoard connects students to top global universities.
+            Headquartered in Dhaka, we specialise across fields like
+            engineering, business, and healthcare.
+          </p>
+        </div>
+
+        {/* Global Branches */}
+        <div>
+          <h3 className="text-xs font-bold uppercase tracking-wide text-[#1B1B1B]">
+            Global Branches
+          </h3>
+          <div className="mt-4 grid grid-cols-2 gap-x-2 gap-y-3 text-sm">
+            {branches.map((branch) => (
+              <BranchItem key={branch.slug} {...branch} />
+            ))}
+          </div>
+        </div>
+
+        {/* Company */}
+        <div>
+          <h3 className="text-xs font-bold uppercase tracking-wide text-[#1B1B1B]">
+            Company
+          </h3>
+          <div className="mt-4 flex flex-col gap-3 text-sm">
+            {companyLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-[#5B5B5B] transition-colors hover:text-[#E0483E]"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Get in Touch */}
+        <div>
+          <h3 className="text-xs font-bold uppercase tracking-wide text-[#1B1B1B]">
+            Get In Touch
+          </h3>
+          <div className="mt-4 flex flex-col gap-3 text-sm text-[#5B5B5B]">
+            <p>33 St James&apos;s Square, London SW1Y 4JS, United Kingdom</p>
+            <a
+              href="mailto:info@admissiononboard.com"
+              className="hover:text-[#E0483E]"
+            >
+              info@admissiononboard.com
+            </a>
+            <a href="tel:+8809610883388" className="hover:text-[#E0483E]">
+              09610883388
+            </a>
+          </div>
+        </div>
+
+        {/* Accreditation */}
+        <div>
+          <h3 className="text-xs font-bold uppercase tracking-wide text-[#1B1B1B]">
+            Accreditation
+          </h3>
+          {/* <div className="mt-4 flex items-center gap-3">
+            <div className="relative h-16 w-16 shrink-0">
               <Image
-                src="/logo.png"
-                alt="Admission OnBoard"
-                width={180}
-                height={40}
+                src="/icef-badge.png"
+                alt="ICEF Accredited Agency"
+                fill
+                sizes="64px"
+                className="object-contain"
               />
-            </Link>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#5B5B5B]">
-              Admission OnBoard is a trusted study abroad consultancy offering
-              complete A-Z guidance and support to help students turn their
-              overseas education goals into reality, all without any hidden
-              service charges.
-            </p>
-          </div>
-
-          {/* Important Links */}
-          <div>
-            <h3 className="text-base font-semibold text-[#1B1B1B]">
-              Important Links
-            </h3>
-            <div className="mt-4 grid grid-cols-2 gap-x-6 gap-y-3 text-sm font-light">
-              <div className="flex flex-col gap-3">
-                {importantLinksLeft.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="text-[#5B5B5B] transition-colors hover:text-black"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-              <div className="flex flex-col gap-3">
-                {importantLinksRight.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="text-[#5B5B5B] transition-colors hover:text-black"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
             </div>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h3 className="text-base font-semibold text-[#1B1B1B]">Contact</h3>
-            <div className="mt-4 flex flex-col gap-3 text-sm text-[#5B5B5B]">
-              <div className="flex items-start gap-2">
-                <PinIcon />
-                <span>
-                  1st Floor, 165 Lake Circus (Abed Dhali Road), Dhaka 1205
-                </span>
-              </div>
-              <div className="flex items-start gap-2">
-                <PhoneIcon />
-                <span>09610883388</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <MailIcon />
-                <a
-                  href="mailto:info@admissiononboard.com"
-                  className="hover:text-[#E0483E]"
-                >
-                  info@admissiononboard.com
-                </a>
-              </div>
+            <div className="relative h-16 w-16 shrink-0">
+              <Image
+                src="/airc-badge.png"
+                alt="AIRC Certified Recruitment Council"
+                fill
+                sizes="64px"
+                className="object-contain"
+              />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-black/[.06] px-6 py-5">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
+      <div className="mt-12 border-t border-black/[.08] pt-6">
+        <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="text-sm text-[#5B5B5B]">
-            &copy;{year} Admission OnBoard Ltd. All rights reserved.
+            &copy; {year} Admission OnBoard. All Rights Reserved.
           </p>
+
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-2 text-sm text-[#5B5B5B]">
+            {legalLinks.map((link, i) => (
+              <React.Fragment key={link.href}>
+                <Link href={link.href} className="hover:text-[#E0483E]">
+                  {link.label}
+                </Link>
+                {i < legalLinks.length - 1 && (
+                  <span className="text-[#C9C9C9]">&middot;</span>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
 
           <div className="flex gap-3">
             {socials.map((social) => (

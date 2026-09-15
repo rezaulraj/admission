@@ -32,7 +32,7 @@ export default function CareerHero() {
             </p>
 
             <Link
-              href="/careers/openings"
+              href="#careers-openings"
               className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#E0483E] px-6 py-3 text-sm font-semibold text-white shadow-md transition-transform hover:scale-105"
             >
               Explore Careers

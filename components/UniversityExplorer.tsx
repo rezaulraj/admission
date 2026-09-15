@@ -164,7 +164,7 @@ export default function UniversityExplorer() {
           {filtered.map((uni) => (
             <Link
               key={uni.slug}
-              href={`/universities/${uni.slug}`}
+              href={`/universities`}
               className="flex flex-col items-center rounded-2xl border border-[#ECECEC] bg-white p-6 text-center shadow-sm transition-shadow hover:shadow-md"
             >
               <div

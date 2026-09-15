@@ -1,15 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-// Place your logo at: /public/logo.png
-// Place your accreditation badges at:
-// /public/icef-badge.png
-// /public/airc-badge.png
 
-// Only mark a branch `active: true` once its country page/office data is
-// actually live. Inactive branches render as plain, non-clickable text.
 const branches = [
-  { name: "United Kingdom", slug: "united-kingdom", active: true },
+  { name: "United Kingdom", slug: "united-kingdom-address", active: true },
   { name: "Bangladesh", slug: "bangladesh", active: true },
   { name: "India", slug: "india", active: false },
   { name: "Nepal", slug: "nepal", active: false },
@@ -17,16 +11,7 @@ const branches = [
   { name: "Sri Lanka", slug: "sri-lanka", active: false },
   { name: "Ghana", slug: "ghana", active: false },
 ];
-// Contact Us
-// USA [ Mission HQ ] :1111 Oakfield Dr., Ste. 115E ,Brandon ,FL 33511
 
-// UK :
-
-// UAE : Level 23, Boulevard Plaza 2 Sheikh Mohammed bin Rashid Boulevard - Dubai
-
-// Bangladesh :3rd floor of Ananda Tower, Jail Road, Sylhet
-
-// Bangladesh :3rd Floor, VIP Plaza, FC Road, G-Block, Near Artillery, Halishahar, Chittagong
 const companyLinks = [
   { label: "About Us", href: "/our-story" },
   { label: "Our Services", href: "/services" },
@@ -46,27 +31,27 @@ const legalLinks = [
 const socials = [
   {
     name: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/company/admission-onboard/",
     path: "M6.9 8.4H3.6V20h3.3V8.4ZM5.3 3.5A1.9 1.9 0 1 0 5.3 7.3 1.9 1.9 0 0 0 5.3 3.5ZM20.4 20h-3.3v-6.2c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V20H9.3V8.4h3.2v1.6h.1c.4-.8 1.6-1.7 3.3-1.7 3.5 0 4.2 2.3 4.2 5.3V20Z",
   },
   {
     name: "Facebook",
-    href: "https://facebook.com",
+    href: "https://www.facebook.com/AdmissionOnBoardOfficial/",
     path: "M13 22v-8h2.7l.4-3H13V9c0-.9.2-1.5 1.5-1.5H16V5c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.5v3H9.8v8H13Z",
   },
   {
     name: "WhatsApp",
-    href: "https://wa.me/",
+    href: "https://wa.me/8801906499741",
     path: "M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8.9-.2.2-.3.2-.5.1-1.4-.7-2.3-1.3-3.2-2.9-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5s-.6-1.5-.8-2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.8c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z",
   },
   {
     name: "YouTube",
-    href: "https://youtube.com",
+    href: "https://www.youtube.com/@AdmissionOnBoard",
     path: "M21.8 8.1s-.2-1.5-.8-2.1c-.8-.8-1.7-.8-2.1-.9C15.9 5 12 5 12 5s-3.9 0-6.9.2c-.4 0-1.3.1-2.1.9-.6.6-.8 2.1-.8 2.1S2 9.9 2 11.6v1.4c0 1.7.2 3.5.2 3.5s.2 1.5.8 2.1c.8.8 1.9.8 2.4.9 1.7.2 6.6.2 6.6.2s3.9 0 6.9-.2c.4 0 1.3-.1 2.1-.9.6-.6.8-2.1.8-2.1s.2-1.7.2-3.5v-1.4c0-1.7-.2-3.5-.2-3.5ZM9.9 15V8.9l5.6 3-5.6 3.1Z",
   },
   {
     name: "Instagram",
-    href: "https://instagram.com",
+    href: "https://instagram.com/AdmissionOnBoard",
     path: "M12 2c2.7 0 3.1 0 4.1.1 1.1 0 1.8.2 2.5.5.7.3 1.2.6 1.8 1.2.6.6.9 1.1 1.2 1.8.3.7.5 1.4.5 2.5.1 1 .1 1.4.1 4.1s0 3.1-.1 4.1c0 1.1-.2 1.8-.5 2.5-.3.7-.6 1.2-1.2 1.8-.6.6-1.1.9-1.8 1.2-.7.3-1.4.5-2.5.5-1 .1-1.4.1-4.1.1s-3.1 0-4.1-.1c-1.1 0-1.8-.2-2.5-.5-.7-.3-1.2-.6-1.8-1.2-.6-.6-.9-1.1-1.2-1.8-.3-.7-.5-1.4-.5-2.5C2 15.1 2 14.7 2 12s0-3.1.1-4.1c0-1.1.2-1.8.5-2.5.3-.7.6-1.2 1.2-1.8.6-.6 1.1-.9 1.8-1.2.7-.3 1.4-.5 2.5-.5C8.9 2 9.3 2 12 2Zm0 1.8c-2.6 0-3 0-4 .1-.9 0-1.4.2-1.7.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.8-.3 1.7-.1 1-.1 1.4-.1 4s0 3 .1 4c0 .9.2 1.4.3 1.7.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.8.3 1.7.3 1 .1 1.4.1 4 .1s3 0 4-.1c.9 0 1.4-.2 1.7-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.8.3-1.7.1-1 .1-1.4.1-4s0-3-.1-4c0-.9-.2-1.4-.3-1.7-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.8-.3-1.7-.3-1-.1-1.4-.1-4-.1Zm0 3.5a4.7 4.7 0 1 1 0 9.4 4.7 4.7 0 0 1 0-9.4Zm0 1.8a2.9 2.9 0 1 0 0 5.8 2.9 2.9 0 0 0 0-5.8Zm4.9-2a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z",
   },
 ];
@@ -83,7 +68,6 @@ function BranchItem({ name, slug, active }: (typeof branches)[number]) {
     );
   }
 
-  // Not active yet: plain, non-clickable text.
   return (
     <span className="cursor-default text-[#B5B5B5]" aria-disabled="true">
       {name}
@@ -114,7 +98,6 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Global Branches */}
         <div>
           <h3 className="text-xs font-bold uppercase tracking-wide text-[#1B1B1B]">
             Global Branches
@@ -126,7 +109,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Company */}
         <div>
           <h3 className="text-xs font-bold uppercase tracking-wide text-[#1B1B1B]">
             Company
@@ -150,15 +132,15 @@ export default function Footer() {
             Get In Touch
           </h3>
           <div className="mt-4 flex flex-col gap-3 text-sm text-[#5B5B5B]">
-            <p>33 St James&apos;s Square, London SW1Y 4JS, United Kingdom</p>
+            <p>25 Gareeb-e-Nawaz Ave, Uttara-11, Dhaka 1230, Bangladesh</p>
             <a
               href="mailto:info@admissiononboard.com"
               className="hover:text-[#E0483E]"
             >
               info@admissiononboard.com
             </a>
-            <a href="tel:+8809610883388" className="hover:text-[#E0483E]">
-              09610883388
+            <a href="tel:+8801906499741" className="hover:text-[#E0483E]">
+              +8801906499741
             </a>
           </div>
         </div>

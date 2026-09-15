@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 // Place your background image at: /public/uk_tower_bridge.webp
 
@@ -26,8 +27,8 @@ export default function CtaBanner() {
               the rest.
             </p>
 
-            <button
-              type="button"
+            <Link
+              href="/contact"
               className="mt-9 inline-flex items-center gap-2 rounded-full bg-black px-7 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 cursor-pointer"
             >
               Schedule A Free Consultation
@@ -46,7 +47,7 @@ export default function CtaBanner() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

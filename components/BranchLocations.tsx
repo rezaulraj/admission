@@ -7,7 +7,7 @@ type Office = {
 };
 
 const offices: Office[] = [
-  { name: "United Kingdom", slug: "united-kingdom", active: true },
+  { name: "United Kingdom", slug: "united-kingdom-address", active: true },
   { name: "Bangladesh", slug: "bangladesh", active: true },
   { name: "Ghana", slug: "ghana", active: false },
   { name: "India", slug: "india", active: false },

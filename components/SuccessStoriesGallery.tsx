@@ -10,32 +10,32 @@ const columns: {
   duration: number;
 }[] = [
   {
-    images: ["/cyprus.png", "/findland.png", "/greece.png"],
+    images: ["/visa1.png", "/visa2.png", "/visa3.png"],
     direction: "up",
     duration: 22,
   },
   {
-    images: ["/cyprus.png", "/findland.png", "/greece.png"],
+    images: ["/visa4.png", "/visa5.png", "/visa6.png"],
     direction: "down",
     duration: 26,
   },
   {
-    images: ["/cyprus.png", "/findland.png", "/greece.png"],
+    images: ["/visa7.png", "/visa8.png", "/visa9.png"],
     direction: "up",
     duration: 30,
   },
   {
-    images: ["/cyprus.png", "/findland.png", "/greece.png"],
+    images: ["/visa10.png", "/visa11.png", "/visa12.png"],
     direction: "down",
     duration: 24,
   },
   {
-    images: ["/cyprus.png", "/findland.png", "/greece.png"],
+    images: ["/visa13.png", "/visa14.png", "/visa15.png"],
     direction: "up",
     duration: 28,
   },
   {
-    images: ["/cyprus.png", "/findland.png", "/greece.png"],
+    images: ["/visa16.png", "/visa17.png", "/visa18.png"],
     direction: "down",
     duration: 20,
   },
@@ -50,8 +50,6 @@ export default function SuccessStoriesGallery() {
         if (!el) return;
         const { direction, duration } = columns[i];
 
-        // Each column's track is duplicated (images repeated twice),
-        // so animating exactly -50% / +50% creates a seamless infinite loop.
         gsap.fromTo(
           el,
           { yPercent: direction === "up" ? 0 : -50 },
@@ -102,10 +100,10 @@ export default function SuccessStoriesGallery() {
         ))}
 
         {/* Fade overlays so columns dissolve into the background at the edges */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#FFFEFA]/50 to-transparent sm:w-40" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#FFFEFA]/50 to-transparent sm:w-40" />
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#FFFEFA]/50 to-transparent" />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#FFFEFA]/50 to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#FFFEFA] to-transparent sm:w-40" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#FFFEFA] to-transparent sm:w-40" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#FFFEFA] to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#FFFEFA] to-transparent" />
       </div>
 
       {/* Text overlay, anchored to the top instead of centered */}

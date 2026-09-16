@@ -71,14 +71,7 @@ export default function Login() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#1B1B1B]/40 to-transparent" />
 
         <div className="relative z-10 flex flex-col justify-between w-full p-12">
-          <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 border border-gray-50">
-              <FaGraduationCap className="text-gray-50 text-lg" />
-            </div>
-            <span className="text-white text-xl font-extrabold tracking-tight">
-              Admission OnBoard
-            </span>
-          </div>
+          
 
           <div className="relative flex-1 flex items-center">
             <svg viewBox="0 0 400 200" className="w-full max-w-md" fill="none">

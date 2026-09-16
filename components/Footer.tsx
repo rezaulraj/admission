@@ -132,12 +132,14 @@ export default function Footer() {
             Get In Touch
           </h3>
           <div className="mt-4 flex flex-col gap-3 text-sm text-[#5B5B5B]">
-            <p>25 Gareeb-e-Nawaz Ave, Uttara-11, Dhaka 1230, Bangladesh</p>
+            <p>
+              Sonargaon Janapath Road Sector 12, Uttara Dhaka-1230, Bangladesh
+            </p>
             <a
-              href="mailto:info@admissiononboard.com"
+              href="mailto:ceo@admissiononboard.com"
               className="hover:text-[#E0483E]"
             >
-              info@admissiononboard.com
+              ceo@admissiononboard.com
             </a>
             <a href="tel:+8801906499741" className="hover:text-[#E0483E]">
               +8801906499741

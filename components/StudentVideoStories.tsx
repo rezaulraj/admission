@@ -15,32 +15,32 @@ const videos = [
   {
     id: "dQw4w9WgXcQ",
     name: "Nusrat Jahan",
-    thumbnail: "/nusrat.jpg",
+    thumbnail: "/success7.png",
   },
   {
     id: "aqz-KE-bpKQ",
     name: "Rafid Hasan",
-    thumbnail: "/rafid.jpg",
+    thumbnail: "/success1.png",
   },
   {
     id: "eYq7WapuDLU",
-    name: "Priya Akter",
-    thumbnail: "/priya.jpg",
+    name: "Rajon Kumar",
+    thumbnail: "/success2.png",
   },
   {
     id: "M7lc1UVf-VE",
     name: "Imran Kabir",
-    thumbnail: "/imran.jpg",
+    thumbnail: "/success5.png",
   },
   {
     id: "hFZFjoX2cGg",
     name: "Tanzila Mim",
-    thumbnail: "/tanzila.jpg",
+    thumbnail: "/nusrat.jpg",
   },
   {
     id: "5qap5aO4i9A",
-    name: "Sadia Islam",
-    thumbnail: "/sadia.jpg",
+    name: "Rakib Uddin",
+    thumbnail: "/success8.png",
   },
 ];
 
@@ -121,7 +121,7 @@ export default function StudentVideoStories() {
               <button
                 key={video.id}
                 type="button"
-                onClick={() => setActiveVideoId(video.id)}
+                // onClick={() => setActiveVideoId(video.id)}
                 className="group relative aspect-[3/4] w-[calc(25%-15px)] min-w-[220px] shrink-0 snap-start overflow-hidden rounded-3xl"
               >
                 <Image

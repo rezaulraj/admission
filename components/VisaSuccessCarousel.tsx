@@ -31,65 +31,65 @@ const stories: Story[] = [
     name: "Rohit Kumar",
     university: "University of Bucharest",
     country: "Romania",
-    image: "/rohit.png",
+    image: "/success1.png",
     summary:
       "Meet Rohit Kumar. He's secured a place in the Bachelor of Computer Science program at the University of Bucharest, Romania! He received end-to-end guidance from our Kalabagan branch.",
   },
   {
-    name: "Farhana Islam Tuli",
+    name: "Rakib Uddin",
     university: "University of Malta",
     country: "Malta",
-    image: "/farhana.png",
+    image: "/success2.png",
     summary:
-      "Meet Farhana Islam Tuli. She's been admitted into the Master of Business Administration program at the University of Malta! Our Banani team supported her through every step of the visa process.",
+      "Meet Rakib Uddin. She's been admitted into the Master of Business Administration program at the University of Malta! Our Banani team supported her through every step of the visa process.",
   },
   {
     name: "Shakib Al Rafi",
     university: "University of Debrecen",
     country: "Hungary",
-    image: "/shakib.png",
+    image: "/success3.png",
     summary:
       "Meet Shakib Al Rafi. He's now enrolled in the Doctor of Medicine program at the University of Debrecen, Hungary! He worked closely with our Mirpur branch throughout his application.",
   },
   {
-    name: "Nabila Chowdhury",
+    name: "Robel Chowdhury",
     university: "University of Cyprus",
     country: "Cyprus",
-    image: "/nabila.png",
+    image: "/success4.png",
     summary:
-      "Meet Nabila Chowdhury. She's secured a place in the Bachelor of Architecture program at the University of Cyprus! Our counsellors guided her from application to visa approval without a hitch.",
+      "Meet Robel Chowdhury. She's secured a place in the Bachelor of Architecture program at the University of Cyprus! Our counsellors guided her from application to visa approval without a hitch.",
   },
   {
     name: "Rakibul Hasan Emon",
     university: "University of Leicester",
     country: "United Kingdom",
-    image: "/rakibul.png",
+    image: "/success5.png",
     summary:
       "Meet Rakibul Hasan Emon. He's been admitted into the Master of Data Analytics program at the University of Leicester, UK! He received complete visa and documentation support from our Dhaka office.",
   },
   {
-    name: "Mahmuda Akter Nipa",
+    name: "Mustakim",
     university: "Aristotle University of Thessaloniki",
     country: "Greece",
-    image: "/visa-stories/mahmuda.png",
+    image: "/success6.png",
     summary:
-      "Meet Mahmuda Akter Nipa. She's now enrolled in the Bachelor of Tourism Management program at Aristotle University of Thessaloniki, Greece! Our team handled her scholarship search and visa filing.",
+      "Meet Mustakim. She's now enrolled in the Bachelor of Tourism Management program at Aristotle University of Thessaloniki, Greece! Our team handled her scholarship search and visa filing.",
   },
   {
-    name: "Tanvir Ahmed Rian",
+    name: "Nusrat Jahan",
     university: "Babes-Bolyai University",
     country: "Romania",
-    image: "/visa-stories/tanvir.png",
+    image: "/success7.png",
     summary:
-      "Meet Tanvir Ahmed Rian. He's secured admission into the Bachelor of Economics program at Babes-Bolyai University, Romania! His visa was processed in record time with our support.",
+      "Meet Nusrat Jahan. He's secured admission into the Bachelor of Economics program at Babes-Bolyai University, Romania! His visa was processed in record time with our support.",
   },
   {
-    name: "Sadia Afrin Mou",
+    name: "Rabby Hossin",
     university: "University of Westminster",
     country: "United Kingdom",
-    image: "/visa-stories/sadia.png",
+    image: "/success8.png",
     summary:
-      "Meet Sadia Afrin Mou. She's been admitted into the Master of Fashion Marketing program at the University of Westminster, UK! Our counsellors helped her put together a winning scholarship application.",
+      "Meet Rabby Hossin. She's been admitted into the Master of Fashion Marketing program at the University of Westminster, UK! Our counsellors helped her put together a winning scholarship application.",
   },
 ];
 

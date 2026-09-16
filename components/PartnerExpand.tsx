@@ -38,7 +38,7 @@ export default function PartnerExpand() {
 
         <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl">
           <Image
-            src="/partner-handshake.jpg"
+            src="/partner-handshake.png"
             alt="Partners shaking hands"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"

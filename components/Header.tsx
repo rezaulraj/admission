@@ -10,11 +10,11 @@ const countries = [
   "New Zealand",
   "Finland",
   "Greece",
+  "Lithuania",
+  "Hungary",
+  "Romania",
   "Malta",
   "Cyprus",
-  "Romania",
-  "Hungary",
-  "Lithuania",
 ];
 
 const navLinks = [

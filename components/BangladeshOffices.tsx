@@ -19,20 +19,13 @@ const defaultOffices: Office[] = [
   {
     slug: "dhaka",
     name: "Dhaka Office",
-    address:
-      "25 Gareeb-e-Nawaz Ave, Uttara -11, Dhaka 1230, Bangladesh",
+    address: "25 Gareeb-e-Nawaz Ave, Uttara -11, Dhaka 1230, Bangladesh",
     phone: "+880 1812 713814",
   },
   {
     slug: "sylhet-center-point",
     name: "Sylhet Office (Jail Road)",
     address: "3rd floor of Ananda Tower, Jail Road, Sylhet",
-    phone: "+880 1812 713814",
-  },
-  {
-    slug: "sylhet-jail-road",
-    name: "Chittagong Office (Halishahar)",
-    address: "3rd Floor, VIP Plaza, FC Road, G-Block, Near Artillery, Halishahar, Chittagong",
     phone: "+880 1812 713814",
   },
 ];

@@ -22,7 +22,7 @@ const programs: Program[] = [
     title: "Foundation Program",
     description:
       "O Level or Year 10 completion. IELTS or PTE required as proof of English proficiency.",
-    image: "/foundation.jfif",
+    image: "/foundation.avif",
     icon: (
       <path d="M12 3 2 8l10 5 8-4v6h2V8L12 3Zm0 8L4 8l8-4 8 4-8 4Zm-6 2v4c0 1.66 2.69 3 6 3s6-1.34 6-3v-4l-6 3-6-3Z" />
     ),
@@ -31,7 +31,7 @@ const programs: Program[] = [
     title: "Diploma Program",
     description:
       "A Level, HSC, or equivalent completion. IELTS or PTE required as proof of English proficiency.",
-    image: "/diploma.jfif",
+    image: "/diploma.avif",
     icon: (
       <path d="M9 2h6a2 2 0 0 1 2 2v2h4a1 1 0 0 1 1 1v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a1 1 0 0 1 1-1h4V4a2 2 0 0 1 2-2Zm0 4h6V4H9v2Z" />
     ),

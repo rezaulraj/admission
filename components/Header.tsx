@@ -7,12 +7,13 @@ import Link from "next/link";
 const countries = [
   "United Kingdom",
   "Australia",
+  "New Zealand",
+  "Finland",
+  "Greece",
   "Malta",
   "Cyprus",
-  "Greece",
   "Romania",
   "Hungary",
-  "Finland",
   "Lithuania",
 ];
 
